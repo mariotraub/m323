@@ -10,11 +10,7 @@ fun calculateScore(word: String): Int {
     return score
 }
 
-fun wordScore(word: String): Int {
-    word.count { it != 'a' }
-    val filter: String = word.filter { it != 'a' }
-    return filter.length
-}
+fun wordScore(word: String) = word.count { it != 'a' }
 
 fun main() {
 }
