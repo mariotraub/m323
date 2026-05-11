@@ -1,5 +1,5 @@
-import aufg1.calculateScore
-import aufg1.wordScore
+package aufg1.t1
+
 import org.junit.jupiter.api.Test
 import kotlin.test.assertEquals
 
