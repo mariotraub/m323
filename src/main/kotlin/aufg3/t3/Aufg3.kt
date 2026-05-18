@@ -18,15 +18,8 @@ data class Task(
     val title: String,
 )
 
-fun sortTasks(tasks: List<Task>) = tasks.sortedWith { t1, t2 ->
-    when (val dateComparison = t1.date.compareTo(t2.date)) {
-        0 -> when (val priorityComparison = t1.priority.compareTo(t2.priority)) {
-            0 -> t1.title.compareTo(t2.title)
-            else -> priorityComparison
-        }
-        else -> dateComparison
-    }
-}
+fun sortTasks(tasks: List<Task>) =
+    tasks.sortedWith(compareBy({ it.date }, {it.priority}, {it.title}))
 
 // 3.5
 data class Node(
